@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <title>Price calculator</title>
+</head>
+
+<body>
+    <section class="wrapper">
+        <div class="sliders-section">
+            <div class="">
+                <label for="storage">Storage: </label>
+                <div class="counter" id="storage-count"></div>
+                <input type="range" name="storage" id="storage" min="0" max="1000">
+            </div>
+            <div class="">
+                <label for="transfer">Transfer: </label>
+                <div class="counter" id="transfer-count"></div>
+                <input type="range" name="transfer" id="transfer" min="0" max="1000">
+            </div>
+
+        </div>
+        <div class="graphic">
+            <div class="legend">
+                <div class="company-name">
+                    <span>backblaze</span>
+                    <img src="./media/icons/backblaze.png" alt="" class="icon">
+                </div>
+                <div class="company-name">
+                    <span>bunny</span>
+                    <div>
+                        <input type="radio" name="storage-type" id="HDD" value="0" checked><label for="HDD">HDD</label>
+                        <input type="radio" name="storage-type" id="SSD" value="1"><label for="SSD">SSD</label>
+                    </div>
+                    <img src="./media/icons/bunny.png" alt="" class="icon">
+                </div>
+                <div class="company-name">
+                    <span>scaleway</span>
+                    <div>
+                        <input type="radio" name="multi" id="multi" value="1" checked><label for="multi">multi</label>
+                        <input type="radio" name="multi" id="single" value="0"><label for="single">single</label>
+                    </div>
+                    <img src="./media/icons/scaleway.png" alt="" class="icon">
+                </div>
+                <div class="company-name">
+                    <span>vultr</span>
+                    <img src="./media/icons/vultr.png" alt="" class="icon">
+                </div>
+            </div>
+            <div class="rows">
+                <div class="row backblaze inactive" style="background-color: red;">
+                    <div class="amount">0</div>
+                </div>
+                <div class="row bunny inactive" style="background-color: orange;">
+                    <div class="amount">0</div>
+                </div>
+                <div class="row scaleway inactive" style="background-color: purple;">
+                    <div class="amount">0</div>
+                </div>
+                <div class="row vultr inactive" style="background-color: blue;">
+                    <div class="amount">0</div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+<script src="./script/main.js" type="module"></script>
+
+</html>

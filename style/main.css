@@ -1,0 +1,89 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="range"] {
+    width: 80%;
+}
+
+.counter {
+    display: block;
+    min-width: 50px;
+}
+
+.graphic {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.legend {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 500px;
+}
+
+.company-name {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+img.icon {
+    max-width: 25px;
+}
+
+.rows {
+    border-top: 3px solid black;
+    display: flex;
+    justify-content: space-between;
+    height: 500px;
+    width: 500px;
+    transform: rotateZ(-90deg);
+    text-align: center;
+    flex-direction: row-reverse;
+}
+
+.amount {
+    padding: 15px;
+    transform: rotateZ(90deg);
+}
+
+.row {
+    width: 15%;
+    height: 10vh;
+    min-height: 10px !important;
+}
+
+.row.inactive {
+    background-color: gray !important;
+}
+
+@media (max-width: 767px) {
+    .graphic {
+        flex-direction: column-reverse;
+    }
+
+    .rows {
+        transform: rotateZ(180deg);
+        width: 100%;
+    }
+
+    .amount {
+        transform: rotateZ(180deg);
+    }
+
+    .legend {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        width: 100%;
+    }
+
+    .company-name {
+        flex-direction: column-reverse;
+        justify-content: left;
+        flex-wrap: wrap;
+    }
+}
